@@ -24,5 +24,26 @@
 </head>
 <body>
   <img src="nota.png.jpg" alt="Felicidades">
+  
+  <!-- Confeti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    // Confeti al cargar la página
+    confetti({
+      particleCount: 150,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+
+    // Disparo extra suave después
+    setTimeout(() => {
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }, 800);
+  </script>
 </body>
 </html>
